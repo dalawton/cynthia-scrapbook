@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Remembering Cynthia J. Smith</title>
+  <meta name="description" content="A scrapbook in loving memory of Cynthia J. Smith.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <p class="site-name" id="siteName">Cynthia J. Smith</p>
+    <a class="btn" id="addLink" href="#" target="_blank" rel="noopener" hidden>Share a memory</a>
+  </header>
+
+  <main class="stage">
+    <p class="status" id="status" role="status">Opening the book…</p>
+    <div class="book" id="book">
+      <div class="pages" id="pages">
+        <div class="slot left" id="slotL"></div>
+        <div class="slot right" id="slotR"></div>
+        <div class="spine" aria-hidden="true"></div>
+      </div>
+    </div>
+    <noscript><p class="status">This scrapbook needs JavaScript to turn its pages.</p></noscript>
+  </main>
+
+  <nav class="controls" aria-label="Turn pages">
+    <button class="round" id="prev" type="button" aria-label="Previous pages">‹</button>
+    <span class="where" id="where" aria-live="polite"></span>
+    <button class="round" id="next" type="button" aria-label="Next pages">›</button>
+  </nav>
+
+  <footer class="foot"><span id="footText"></span></footer>
+
+  <!-- Opened item -->
+  <div class="focus" id="focus" hidden role="dialog" aria-modal="true" aria-label="Scrapbook item">
+    <div class="focus-backdrop"></div>
+    <article class="focus-card" id="focusCard">
+      <button class="focus-close" id="focusClose" type="button" aria-label="Close">×</button>
+      <div class="focus-media" id="focusMedia"></div>
+      <div class="focus-text" id="focusText"></div>
+    </article>
+    <button class="focus-nav prev" id="focusPrev" type="button" aria-label="Previous item">‹</button>
+    <button class="focus-nav next" id="focusNext" type="button" aria-label="Next item">›</button>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
